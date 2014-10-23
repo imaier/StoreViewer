@@ -9,6 +9,7 @@
 #import "StoreListTableViewController.h"
 #import "StoreFetcher.h"
 #import "StoreDetailsViewController.h"
+#import "StoreTableViewCell.h"
 
 @interface StoreListTableViewController ()
 
@@ -67,15 +68,41 @@
     return [self.stores count];
 }
 
+- (void)prepareStoreTableViewCell:(StoreTableViewCell*)storeCell toDisplayWithDictionary:(NSDictionary *)store
+{
+    storeCell.phoneLabel.text = [store valueForKeyPath:STORE_PHONE];
+    storeCell.addressLabel.text = [store valueForKeyPath:STORE_ADDRESS];
+    
+    NSURL* logoURL = [NSURL URLWithString:[store valueForKeyPath:STORE_LOGO_URL]];
+    storeCell.logoURL = [logoURL copy];
+    storeCell.logoImage.image = nil;
+    storeCell.activityIndicator.hidden = NO;
+    [storeCell.activityIndicator startAnimating];
+    [storeCell.activityIndicator hidesWhenStopped];
+
+    dispatch_queue_t fetcher = dispatch_queue_create("logo fetcher", NULL);
+    dispatch_async(fetcher, ^{
+        NSData *logoData = [NSData dataWithContentsOfURL:logoURL];
+        UIImage *logo = [UIImage imageWithData:logoData];
+        dispatch_async(dispatch_get_main_queue(),^{
+            if ([storeCell.logoURL isEqual:logoURL]) {
+                storeCell.logoImage.image = logo;
+                [storeCell.activityIndicator stopAnimating];
+            }
+        });
+    });
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Store Cell" forIndexPath:indexPath];
 
     NSDictionary *store = self.stores[indexPath.row];
     
-    cell.textLabel.text = [store valueForKeyPath:STORE_NAME];
-    cell.detailTextLabel.text = [store valueForKeyPath:STORE_ADDRESS];
-    
+    if ([cell isKindOfClass:[StoreTableViewCell class]]) {
+        [self prepareStoreTableViewCell:(StoreTableViewCell*)cell toDisplayWithDictionary:store];
+    }
+
     return cell;
 }
 

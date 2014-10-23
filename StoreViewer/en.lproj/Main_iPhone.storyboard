@@ -3,37 +3,68 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Stores-->
         <scene sceneID="Zri-pd-x73">
             <objects>
                 <tableViewController id="hZF-x9-yRO" customClass="StoreListTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="pQa-38-J1H">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="104" sectionHeaderHeight="22" sectionFooterHeight="22" id="pQa-38-J1H">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Store Cell" textLabel="R4z-8Z-P0h" detailTextLabel="HKf-19-6mg" style="IBUITableViewCellStyleSubtitle" id="8ZA-oE-ekE">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Store Cell" rowHeight="86" id="8ZA-oE-ekE" customClass="StoreTableViewCell">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8ZA-oE-ekE" id="0WH-h5-Dbk">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="R4z-8Z-P0h">
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="vS7-oM-QHY">
+                                            <rect key="frame" x="133" y="21" width="20" height="20"/>
+                                        </activityIndicatorView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wos-Pt-oZp">
+                                            <rect key="frame" x="8" y="11" width="271" height="39"/>
+                                            <accessibility key="accessibilityConfiguration" label="Logo"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UIE-K6-7g5">
+                                            <rect key="frame" x="8" y="56" width="90" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="90" id="a5b-UM-bkl"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HKf-19-6mg">
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ibx-CY-tDI">
+                                            <rect key="frame" x="106" y="56" width="173" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="wos-Pt-oZp" firstAttribute="top" secondItem="0WH-h5-Dbk" secondAttribute="topMargin" constant="3" id="5br-Go-YBx"/>
+                                        <constraint firstItem="UIE-K6-7g5" firstAttribute="baseline" secondItem="Ibx-CY-tDI" secondAttribute="baseline" id="AQC-KS-zzC"/>
+                                        <constraint firstItem="UIE-K6-7g5" firstAttribute="firstBaseline" secondItem="Ibx-CY-tDI" secondAttribute="firstBaseline" id="Azo-sd-H5O"/>
+                                        <constraint firstItem="Ibx-CY-tDI" firstAttribute="top" secondItem="vS7-oM-QHY" secondAttribute="bottom" constant="15" id="CeS-Iz-XPd"/>
+                                        <constraint firstItem="vS7-oM-QHY" firstAttribute="centerX" secondItem="wos-Pt-oZp" secondAttribute="centerX" id="PHF-yg-d4t"/>
+                                        <constraint firstItem="UIE-K6-7g5" firstAttribute="top" secondItem="wos-Pt-oZp" secondAttribute="bottom" constant="6" id="RQ3-QM-jPn"/>
+                                        <constraint firstItem="Ibx-CY-tDI" firstAttribute="bottom" secondItem="0WH-h5-Dbk" secondAttribute="bottomMargin" id="SOf-5f-sEW"/>
+                                        <constraint firstItem="Ibx-CY-tDI" firstAttribute="leading" secondItem="UIE-K6-7g5" secondAttribute="trailing" constant="8" symbolic="YES" id="Z69-fS-HcT"/>
+                                        <constraint firstItem="vS7-oM-QHY" firstAttribute="top" secondItem="0WH-h5-Dbk" secondAttribute="topMargin" constant="13" id="ZnX-be-xaS"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Ibx-CY-tDI" secondAttribute="trailing" id="mkX-c9-XlV"/>
+                                        <constraint firstItem="wos-Pt-oZp" firstAttribute="leading" secondItem="UIE-K6-7g5" secondAttribute="leading" id="neJ-01-AAE"/>
+                                        <constraint firstItem="wos-Pt-oZp" firstAttribute="trailing" secondItem="0WH-h5-Dbk" secondAttribute="trailingMargin" id="wJK-Va-eTo"/>
+                                        <constraint firstItem="wos-Pt-oZp" firstAttribute="leading" secondItem="0WH-h5-Dbk" secondAttribute="leadingMargin" id="wQ3-7i-2gi"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="activityIndicator" destination="vS7-oM-QHY" id="6kn-7p-q7J"/>
+                                    <outlet property="addressLabel" destination="Ibx-CY-tDI" id="Rgn-yD-kjy"/>
+                                    <outlet property="logoImage" destination="wos-Pt-oZp" id="Pwx-rY-G4A"/>
+                                    <outlet property="phoneLabel" destination="UIE-K6-7g5" id="LlA-Lj-6an"/>
                                     <segue destination="xiG-KB-X6t" kind="push" identifier="Store Details" id="7nf-1X-4SN"/>
                                 </connections>
                             </tableViewCell>
@@ -48,7 +79,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="saa-Wc-vFA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="624" y="137"/>
+            <point key="canvasLocation" x="623" y="137"/>
         </scene>
         <!--Store Details View Controller-->
         <scene sceneID="RA0-Cx-Y2U">
@@ -67,7 +98,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E4Z-wA-931" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1127" y="137"/>
+            <point key="canvasLocation" x="1119" y="137"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ayw-8R-k5t">

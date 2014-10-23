@@ -25,6 +25,7 @@
 		EF3C8D8E19F7B5DE003347BC /* StoreFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3C8D8D19F7B5DE003347BC /* StoreFetcher.m */; };
 		EF3C8D9119F7C3D2003347BC /* StoreDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3C8D9019F7C3D2003347BC /* StoreDetailsViewController.m */; };
 		EF3C8D9319F7C902003347BC /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF3C8D9219F7C902003347BC /* Launch Screen.xib */; };
+		EF8B4A2119F8E9EB00943933 /* StoreTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EF8B4A2019F8E9EB00943933 /* StoreTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,8 @@
 		EF3C8D8F19F7C3D2003347BC /* StoreDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreDetailsViewController.h; sourceTree = "<group>"; };
 		EF3C8D9019F7C3D2003347BC /* StoreDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreDetailsViewController.m; sourceTree = "<group>"; };
 		EF3C8D9219F7C902003347BC /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch Screen.xib"; sourceTree = "<group>"; };
+		EF8B4A1F19F8E9EB00943933 /* StoreTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreTableViewCell.h; sourceTree = "<group>"; };
+		EF8B4A2019F8E9EB00943933 /* StoreTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +128,8 @@
 				844D7B7919F7989E000AD7A3 /* AppDelegate.h */,
 				844D7B7A19F7989E000AD7A3 /* AppDelegate.m */,
 				844D7B7C19F7989E000AD7A3 /* Main_iPhone.storyboard */,
+				EF8B4A1F19F8E9EB00943933 /* StoreTableViewCell.h */,
+				EF8B4A2019F8E9EB00943933 /* StoreTableViewCell.m */,
 				844D7B7F19F7989E000AD7A3 /* Main_iPad.storyboard */,
 				EF3C8D8F19F7C3D2003347BC /* StoreDetailsViewController.h */,
 				EF3C8D9019F7C3D2003347BC /* StoreDetailsViewController.m */,
@@ -272,6 +277,7 @@
 				EF3C8D8E19F7B5DE003347BC /* StoreFetcher.m in Sources */,
 				844D7B7B19F7989E000AD7A3 /* AppDelegate.m in Sources */,
 				844D7B7719F7989E000AD7A3 /* main.m in Sources */,
+				EF8B4A2119F8E9EB00943933 /* StoreTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
