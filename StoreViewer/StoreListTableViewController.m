@@ -80,12 +80,12 @@
     [storeCell.activityIndicator startAnimating];
     [storeCell.activityIndicator hidesWhenStopped];
 
-    dispatch_queue_t fetcher = dispatch_queue_create("logo fetcher", NULL);
+    dispatch_queue_t fetcher = dispatch_queue_create("StoreCell logo fetcher", NULL);
     dispatch_async(fetcher, ^{
         NSData *logoData = [NSData dataWithContentsOfURL:logoURL];
         UIImage *logo = [UIImage imageWithData:logoData];
         dispatch_async(dispatch_get_main_queue(),^{
-            if ([storeCell.logoURL isEqual:logoURL]) {
+            if ([logoURL isEqual:storeCell.logoURL]) {
                 storeCell.logoImage.image = logo;
                 [storeCell.activityIndicator stopAnimating];
             }
@@ -108,17 +108,21 @@
 
 #pragma mark - Navigation
 
+-(void)prepareStoreDetailsViewController:(StoreDetailsViewController*)sdvc toDisplayWithDictionary:(NSDictionary *)store andLogoImage:(UIImage*)logoImage
+{
+    sdvc.title = [store valueForKeyPath:STORE_NAME];
+    sdvc.store = store;
+    sdvc.cachedImage = logoImage;
+}
+
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([sender isKindOfClass:[UITableViewCell class]]) {
+    if ([sender isKindOfClass:[StoreTableViewCell class]]) {
         NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
         if (indexPath) {
             if ([segue.identifier isEqualToString:@"Store Details"] ) {
                 if ([[segue destinationViewController] isKindOfClass:[StoreDetailsViewController class]]) {
-                    StoreDetailsViewController* sdvc = [segue destinationViewController];
-                    NSDictionary *store = self.stores[indexPath.row];
-                    sdvc.title = [store valueForKeyPath:STORE_NAME];
-                    sdvc.store = store;
+                    [self prepareStoreDetailsViewController:[segue destinationViewController] toDisplayWithDictionary:self.stores[indexPath.row] andLogoImage:nil/*((StoreTableViewCell*)sender).logoImage.image*/];
                 }
              }
         }

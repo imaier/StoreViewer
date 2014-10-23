@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface StoreDetailsViewController : UIViewController
-@property (nonatomic,strong) NSDictionary *store;
+
+@property (nonatomic, strong) NSDictionary *store;
+@property (nonatomic, strong) UIImage *cachedImage;
+
 @end
