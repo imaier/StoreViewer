@@ -26,6 +26,9 @@
 		EF3C8D9119F7C3D2003347BC /* StoreDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3C8D9019F7C3D2003347BC /* StoreDetailsViewController.m */; };
 		EF3C8D9319F7C902003347BC /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF3C8D9219F7C902003347BC /* Launch Screen.xib */; };
 		EF8B4A2119F8E9EB00943933 /* StoreTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EF8B4A2019F8E9EB00943933 /* StoreTableViewCell.m */; };
+		EF8B4A2419FA393100943933 /* StoresOnMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF8B4A2319FA393100943933 /* StoresOnMapViewController.m */; };
+		EF8B4A2719FA444300943933 /* StoreAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = EF8B4A2619FA444300943933 /* StoreAnnotation.m */; };
+		EF8B4A2919FA4CCB00943933 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF8B4A2819FA4CCB00943933 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +69,11 @@
 		EF3C8D9219F7C902003347BC /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch Screen.xib"; sourceTree = "<group>"; };
 		EF8B4A1F19F8E9EB00943933 /* StoreTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreTableViewCell.h; sourceTree = "<group>"; };
 		EF8B4A2019F8E9EB00943933 /* StoreTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreTableViewCell.m; sourceTree = "<group>"; };
+		EF8B4A2219FA393100943933 /* StoresOnMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoresOnMapViewController.h; sourceTree = "<group>"; };
+		EF8B4A2319FA393100943933 /* StoresOnMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoresOnMapViewController.m; sourceTree = "<group>"; };
+		EF8B4A2519FA444300943933 /* StoreAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreAnnotation.h; sourceTree = "<group>"; };
+		EF8B4A2619FA444300943933 /* StoreAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreAnnotation.m; sourceTree = "<group>"; };
+		EF8B4A2819FA4CCB00943933 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF8B4A2919FA4CCB00943933 /* MapKit.framework in Frameworks */,
 				844D7B6D19F7989E000AD7A3 /* CoreGraphics.framework in Frameworks */,
 				844D7B6F19F7989E000AD7A3 /* UIKit.framework in Frameworks */,
 				844D7B6B19F7989E000AD7A3 /* Foundation.framework in Frameworks */,
@@ -114,6 +123,7 @@
 		844D7B6919F7989E000AD7A3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EF8B4A2819FA4CCB00943933 /* MapKit.framework */,
 				844D7B6A19F7989E000AD7A3 /* Foundation.framework */,
 				844D7B6C19F7989E000AD7A3 /* CoreGraphics.framework */,
 				844D7B6E19F7989E000AD7A3 /* UIKit.framework */,
@@ -128,13 +138,17 @@
 				844D7B7919F7989E000AD7A3 /* AppDelegate.h */,
 				844D7B7A19F7989E000AD7A3 /* AppDelegate.m */,
 				844D7B7C19F7989E000AD7A3 /* Main_iPhone.storyboard */,
-				EF8B4A1F19F8E9EB00943933 /* StoreTableViewCell.h */,
-				EF8B4A2019F8E9EB00943933 /* StoreTableViewCell.m */,
 				844D7B7F19F7989E000AD7A3 /* Main_iPad.storyboard */,
-				EF3C8D8F19F7C3D2003347BC /* StoreDetailsViewController.h */,
-				EF3C8D9019F7C3D2003347BC /* StoreDetailsViewController.m */,
 				EF3C8D8919F7B0C5003347BC /* StoreListTableViewController.h */,
 				EF3C8D8A19F7B0C5003347BC /* StoreListTableViewController.m */,
+				EF8B4A1F19F8E9EB00943933 /* StoreTableViewCell.h */,
+				EF8B4A2019F8E9EB00943933 /* StoreTableViewCell.m */,
+				EF3C8D8F19F7C3D2003347BC /* StoreDetailsViewController.h */,
+				EF3C8D9019F7C3D2003347BC /* StoreDetailsViewController.m */,
+				EF8B4A2219FA393100943933 /* StoresOnMapViewController.h */,
+				EF8B4A2319FA393100943933 /* StoresOnMapViewController.m */,
+				EF8B4A2519FA444300943933 /* StoreAnnotation.h */,
+				EF8B4A2619FA444300943933 /* StoreAnnotation.m */,
 				EF3C8D8C19F7B5DE003347BC /* StoreFetcher.h */,
 				EF3C8D8D19F7B5DE003347BC /* StoreFetcher.m */,
 				844D7B8519F7989E000AD7A3 /* Images.xcassets */,
@@ -276,8 +290,10 @@
 				EF3C8D8B19F7B0C5003347BC /* StoreListTableViewController.m in Sources */,
 				EF3C8D8E19F7B5DE003347BC /* StoreFetcher.m in Sources */,
 				844D7B7B19F7989E000AD7A3 /* AppDelegate.m in Sources */,
+				EF8B4A2719FA444300943933 /* StoreAnnotation.m in Sources */,
 				844D7B7719F7989E000AD7A3 /* main.m in Sources */,
 				EF8B4A2119F8E9EB00943933 /* StoreTableViewCell.m in Sources */,
+				EF8B4A2419FA393100943933 /* StoresOnMapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

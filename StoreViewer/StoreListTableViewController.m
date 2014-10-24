@@ -10,6 +10,7 @@
 #import "StoreFetcher.h"
 #import "StoreDetailsViewController.h"
 #import "StoreTableViewCell.h"
+#import "StoresOnMapViewController.h"
 
 @interface StoreListTableViewController ()
 
@@ -115,6 +116,13 @@
     sdvc.cachedImage = logoImage;
 }
 
+
+-(void)prepareToDisplayStoresOnMapViewController:(StoresOnMapViewController*)somvc
+{
+    somvc.stores = self.stores;
+    somvc.selectedStore = nil;
+}
+
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([sender isKindOfClass:[StoreTableViewCell class]]) {
@@ -126,8 +134,11 @@
                 }
              }
         }
+    } else if ([segue.identifier isEqualToString:@"Stores on Map"]) {
+        if ([[segue destinationViewController] isKindOfClass:[StoresOnMapViewController class]]) {
+            [self prepareToDisplayStoresOnMapViewController:segue.destinationViewController];
+        }
     }
 }
-
 
 @end

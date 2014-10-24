@@ -75,7 +75,13 @@
                             <outlet property="delegate" destination="hZF-x9-yRO" id="0y7-lu-0TL"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Stores" id="xRo-O2-7lu"/>
+                    <navigationItem key="navigationItem" title="Stores" id="xRo-O2-7lu">
+                        <barButtonItem key="rightBarButtonItem" title="Map" id="Z2D-RH-G3e">
+                            <connections>
+                                <segue destination="XTM-0I-GKA" kind="push" identifier="Stores on Map" id="geC-gS-qSf"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="saa-Wc-vFA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -216,7 +222,13 @@
                             <constraint firstItem="Shy-Ac-gi3" firstAttribute="leading" secondItem="v2k-62-GEQ" secondAttribute="leading" id="zWa-sC-tjV"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="tol-dY-LO3"/>
+                    <navigationItem key="navigationItem" id="tol-dY-LO3">
+                        <barButtonItem key="rightBarButtonItem" title="Show" id="lGB-xr-9fo">
+                            <connections>
+                                <segue destination="XTM-0I-GKA" kind="push" identifier="Show Store on map" id="mtV-JA-0ix"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="activityIndicator" destination="xgB-3z-40U" id="DdJ-XT-eDg"/>
                         <outlet property="addressLabel" destination="Lpa-Y0-Hhm" id="i2D-mq-ZcA"/>
@@ -231,6 +243,40 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E4Z-wA-931" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1119" y="137"/>
+        </scene>
+        <!--Stores-->
+        <scene sceneID="swl-Yl-8eu">
+            <objects>
+                <viewController id="XTM-0I-GKA" customClass="StoresOnMapViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zvy-fx-tbh"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZV2-h3-jmr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="b4c-Jm-M5V">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="k6N-gA-e9G">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="k6N-gA-e9G" firstAttribute="leading" secondItem="b4c-Jm-M5V" secondAttribute="leading" id="P50-q7-KD4"/>
+                            <constraint firstItem="k6N-gA-e9G" firstAttribute="top" secondItem="zvy-fx-tbh" secondAttribute="bottom" id="Rre-1i-tua"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="k6N-gA-e9G" secondAttribute="bottom" id="kDs-C9-1sf"/>
+                            <constraint firstAttribute="trailing" secondItem="k6N-gA-e9G" secondAttribute="trailing" id="mWg-Gp-6FZ"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <navigationItem key="navigationItem" title="Stores" id="g1g-hz-Ebd"/>
+                    <connections>
+                        <outlet property="mapView" destination="k6N-gA-e9G" id="DTn-4I-8yJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EYO-8j-rpB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1119" y="855"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ayw-8R-k5t">
@@ -256,4 +302,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="mtV-JA-0ix"/>
+    </inferredMetricsTieBreakers>
 </document>

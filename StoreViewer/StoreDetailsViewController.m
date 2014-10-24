@@ -8,8 +8,11 @@
 
 #import "StoreDetailsViewController.h"
 #import "StoreFetcher.h"
+#import "StoresOnMapViewController.h"
+
 
 @interface StoreDetailsViewController ()
+
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 @property (weak, nonatomic) IBOutlet UIImageView *logoImage;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
@@ -35,16 +38,26 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
+
 #pragma mark - Navigation
 
+
+
+-(void)prepareStoresOnMapViewController:(StoresOnMapViewController*)somvc toDisplayStroe:(NSDictionary*)store
+{
+    somvc.stores = @[store];
+    somvc.selectedStore = store;
+}
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+    
+    if ([segue.identifier isEqualToString:@"Show Store on map"]) {
+        if ([[segue destinationViewController] isKindOfClass:[StoresOnMapViewController class]]) {
+            [self prepareStoresOnMapViewController:segue.destinationViewController toDisplayStroe:self.store];
+        }
+    }
 
+}
 
 - (void)fillData
 {
