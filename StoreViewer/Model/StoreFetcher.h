@@ -28,4 +28,7 @@
 
 + (NSURL*)URLforStoreDB;
 
++ (NSArray*)fetchStores;
+
+
 @end
