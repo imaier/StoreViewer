@@ -68,6 +68,7 @@
 {
     if (_fetchedResultsController != fetchedResultsController) {
         _fetchedResultsController = fetchedResultsController;
+        fetchedResultsController.delegate = self;
         NSError *error;
         [fetchedResultsController performFetch:&error];
         [self updateMapViewAnnotation];
