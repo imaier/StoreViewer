@@ -80,9 +80,6 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <outlet property="mapButton" destination="Z2D-RH-G3e" id="uXN-2d-WFp"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="saa-Wc-vFA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -304,6 +301,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="geC-gS-qSf"/>
+        <segue reference="mtV-JA-0ix"/>
     </inferredMetricsTieBreakers>
 </document>
