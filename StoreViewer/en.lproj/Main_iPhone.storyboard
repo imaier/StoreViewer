@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
-        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -47,9 +46,7 @@
                                     <constraints>
                                         <constraint firstItem="Ibx-CY-tDI" firstAttribute="top" secondItem="wos-Pt-oZp" secondAttribute="bottom" constant="6" id="1Uz-Bt-EPh"/>
                                         <constraint firstItem="wos-Pt-oZp" firstAttribute="top" secondItem="0WH-h5-Dbk" secondAttribute="topMargin" constant="3" id="5br-Go-YBx"/>
-                                        <constraint firstItem="UIE-K6-7g5" firstAttribute="baseline" secondItem="Ibx-CY-tDI" secondAttribute="baseline" id="AQC-KS-zzC"/>
-                                        <constraint firstItem="UIE-K6-7g5" firstAttribute="firstBaseline" secondItem="Ibx-CY-tDI" secondAttribute="firstBaseline" id="Azo-sd-H5O"/>
-                                        <constraint firstItem="Ibx-CY-tDI" firstAttribute="top" secondItem="vS7-oM-QHY" secondAttribute="bottom" priority="1" constant="15" id="CeS-Iz-XPd"/>
+                                        <constraint firstItem="UIE-K6-7g5" firstAttribute="bottom" secondItem="0WH-h5-Dbk" secondAttribute="bottomMargin" id="FbG-Us-rBG"/>
                                         <constraint firstItem="vS7-oM-QHY" firstAttribute="centerX" secondItem="wos-Pt-oZp" secondAttribute="centerX" id="PHF-yg-d4t"/>
                                         <constraint firstItem="UIE-K6-7g5" firstAttribute="top" secondItem="wos-Pt-oZp" secondAttribute="bottom" constant="6" id="RQ3-QM-jPn"/>
                                         <constraint firstItem="Ibx-CY-tDI" firstAttribute="bottom" secondItem="0WH-h5-Dbk" secondAttribute="bottomMargin" id="SOf-5f-sEW"/>
@@ -83,10 +80,13 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="mapButton" destination="Z2D-RH-G3e" id="uXN-2d-WFp"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="saa-Wc-vFA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="623" y="137"/>
+            <point key="canvasLocation" x="623" y="136"/>
         </scene>
         <!--Store View Controller-->
         <scene sceneID="RA0-Cx-Y2U">
@@ -265,7 +265,7 @@
                         <constraints>
                             <constraint firstItem="k6N-gA-e9G" firstAttribute="leading" secondItem="b4c-Jm-M5V" secondAttribute="leading" id="P50-q7-KD4"/>
                             <constraint firstItem="k6N-gA-e9G" firstAttribute="top" secondItem="zvy-fx-tbh" secondAttribute="bottom" id="Rre-1i-tua"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="k6N-gA-e9G" secondAttribute="bottom" id="kDs-C9-1sf"/>
+                            <constraint firstAttribute="bottom" secondItem="k6N-gA-e9G" secondAttribute="bottom" id="kDs-C9-1sf"/>
                             <constraint firstAttribute="trailing" secondItem="k6N-gA-e9G" secondAttribute="trailing" id="mWg-Gp-6FZ"/>
                         </constraints>
                     </view>
