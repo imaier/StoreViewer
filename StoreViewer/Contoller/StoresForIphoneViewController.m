@@ -10,4 +10,9 @@
 
 @implementation StoresForIphoneViewController
 
+- (NSUInteger)supportedInterfaceOrientations
+{
+    return UIInterfaceOrientationMaskPortrait + UIInterfaceOrientationMaskPortraitUpsideDown;
+}
+
 @end
