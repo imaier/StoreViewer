@@ -7,6 +7,7 @@
 //
 
 #import "StoreFetcher.h"
+#import "LocalizedStrings.h"
 
 @implementation StoreFetcher
 
@@ -24,8 +25,8 @@
         jsonData = [NSData dataWithContentsOfURL:url];
     }
     @catch (NSException *exception) {
-        UIAlertView *theAlert = [[UIAlertView alloc] initWithTitle:@"Dowload Error"
-                                                           message:exception.description
+        UIAlertView *theAlert = [[UIAlertView alloc] initWithTitle:STORE_FETCHER_DOWNLOAD_ERROR_TITLE
+                                                           message:STORE_FETCHER_DOWNLOAD_ERROR_DISCRIPTION
                                                           delegate:nil
                                                  cancelButtonTitle:@"OK"
                                                  otherButtonTitles:nil];

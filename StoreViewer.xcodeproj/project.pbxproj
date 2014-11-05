@@ -20,7 +20,6 @@
 		844D7B8F19F7989E000AD7A3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 844D7B6E19F7989E000AD7A3 /* UIKit.framework */; };
 		844D7B9719F7989E000AD7A3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 844D7B9519F7989E000AD7A3 /* InfoPlist.strings */; };
 		844D7B9919F7989E000AD7A3 /* StoreViewerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 844D7B9819F7989E000AD7A3 /* StoreViewerTests.m */; };
-		EF3C8D9319F7C902003347BC /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF3C8D9219F7C902003347BC /* Launch Screen.xib */; };
 		EF8B4A2919FA4CCB00943933 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF8B4A2819FA4CCB00943933 /* MapKit.framework */; };
 		EF8B4A2E1A00D53400943933 /* StoreViewerModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EF8B4A2C1A00D53400943933 /* StoreViewerModel.xcdatamodeld */; };
 		EF8B4A341A00D99500943933 /* Store+Create.m in Sources */ = {isa = PBXBuildFile; fileRef = EF8B4A331A00D99500943933 /* Store+Create.m */; };
@@ -37,6 +36,8 @@
 		EF8B4A651A023BEC00943933 /* StoreFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = EF8B4A5F1A023BEC00943933 /* StoreFetcher.m */; };
 		EF8B4A661A023BEC00943933 /* ImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = EF8B4A601A023BEC00943933 /* ImageCache.m */; };
 		EF8B4A6A1A023C0900943933 /* StoreTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EF8B4A691A023C0900943933 /* StoreTableViewCell.m */; };
+		EF8B4A6B1A02514200943933 /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF8B4A6D1A02514200943933 /* Launch Screen.xib */; };
+		EF8B4A721A0A4B9E00943933 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EF8B4A701A0A4B9E00943933 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,7 +56,6 @@
 		844D7B6C19F7989E000AD7A3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		844D7B6E19F7989E000AD7A3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		844D7B7219F7989E000AD7A3 /* StoreViewer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "StoreViewer-Info.plist"; sourceTree = "<group>"; };
-		844D7B7419F7989E000AD7A3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		844D7B7619F7989E000AD7A3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		844D7B7819F7989E000AD7A3 /* StoreViewer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StoreViewer-Prefix.pch"; sourceTree = "<group>"; };
 		844D7B8519F7989E000AD7A3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -66,7 +66,6 @@
 		844D7B9819F7989E000AD7A3 /* StoreViewerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StoreViewerTests.m; sourceTree = "<group>"; };
 		844D7BA619F79A39000AD7A3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		844D7BA819F79A73000AD7A3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		EF3C8D9219F7C902003347BC /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch Screen.xib"; sourceTree = "<group>"; };
 		EF8B4A2819FA4CCB00943933 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		EF8B4A2D1A00D53400943933 /* StoreViewerModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StoreViewerModel.xcdatamodel; sourceTree = "<group>"; };
 		EF8B4A321A00D99500943933 /* Store+Create.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Store+Create.h"; path = "Model/Store+Create.h"; sourceTree = "<group>"; };
@@ -97,6 +96,10 @@
 		EF8B4A621A023BEC00943933 /* StoreFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StoreFetcher.h; path = Model/StoreFetcher.h; sourceTree = "<group>"; };
 		EF8B4A681A023C0900943933 /* StoreTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StoreTableViewCell.h; path = View/StoreTableViewCell.h; sourceTree = "<group>"; };
 		EF8B4A691A023C0900943933 /* StoreTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StoreTableViewCell.m; path = View/StoreTableViewCell.m; sourceTree = "<group>"; };
+		EF8B4A6C1A02514200943933 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = "en.lproj/Launch Screen.xib"; sourceTree = "<group>"; };
+		EF8B4A6E1A0258C300943933 /* LocalizedStrings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LocalizedStrings.h; path = Model/LocalizedStrings.h; sourceTree = "<group>"; };
+		EF8B4A711A0A4B9E00943933 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		EF8B4A731A0A4C7E00943933 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,7 +161,6 @@
 		844D7B7019F7989E000AD7A3 /* StoreViewer */ = {
 			isa = PBXGroup;
 			children = (
-				844D7B8519F7989E000AD7A3 /* Images.xcassets */,
 				EF8B4A2B1A00D4FF00943933 /* Model */,
 				EF8B4A521A02275F00943933 /* View */,
 				EF8B4A411A00EAD200943933 /* Controller */,
@@ -173,6 +175,7 @@
 			children = (
 				844D7B7219F7989E000AD7A3 /* StoreViewer-Info.plist */,
 				844D7B7319F7989E000AD7A3 /* InfoPlist.strings */,
+				EF8B4A701A0A4B9E00943933 /* Localizable.strings */,
 				844D7B7619F7989E000AD7A3 /* main.m */,
 				844D7B7819F7989E000AD7A3 /* StoreViewer-Prefix.pch */,
 			);
@@ -202,7 +205,8 @@
 			children = (
 				844D7B7C19F7989E000AD7A3 /* Main_iPhone.storyboard */,
 				844D7B7F19F7989E000AD7A3 /* Main_iPad.storyboard */,
-				EF3C8D9219F7C902003347BC /* Launch Screen.xib */,
+				EF8B4A6D1A02514200943933 /* Launch Screen.xib */,
+				844D7B8519F7989E000AD7A3 /* Images.xcassets */,
 			);
 			name = Resourses;
 			sourceTree = "<group>";
@@ -219,10 +223,11 @@
 				EF8B4A331A00D99500943933 /* Store+Create.m */,
 				EF8B4A431A00FFE200943933 /* Notifications.m */,
 				EF8B4A451A01000F00943933 /* Notifications.h */,
-				EF8B4A5F1A023BEC00943933 /* StoreFetcher.m */,
 				EF8B4A601A023BEC00943933 /* ImageCache.m */,
 				EF8B4A611A023BEC00943933 /* ImageCache.h */,
 				EF8B4A621A023BEC00943933 /* StoreFetcher.h */,
+				EF8B4A5F1A023BEC00943933 /* StoreFetcher.m */,
+				EF8B4A6E1A0258C300943933 /* LocalizedStrings.h */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -334,10 +339,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				844D7B8119F7989E000AD7A3 /* Main_iPad.storyboard in Resources */,
+				EF8B4A721A0A4B9E00943933 /* Localizable.strings in Resources */,
 				844D7B8619F7989E000AD7A3 /* Images.xcassets in Resources */,
 				844D7B7E19F7989E000AD7A3 /* Main_iPhone.storyboard in Resources */,
 				844D7B7519F7989E000AD7A3 /* InfoPlist.strings in Resources */,
-				EF3C8D9319F7C902003347BC /* Launch Screen.xib in Resources */,
+				EF8B4A6B1A02514200943933 /* Launch Screen.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,7 +403,7 @@
 		844D7B7319F7989E000AD7A3 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				844D7B7419F7989E000AD7A3 /* en */,
+				EF8B4A731A0A4C7E00943933 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -424,6 +430,22 @@
 				844D7B9619F7989E000AD7A3 /* en */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		EF8B4A6D1A02514200943933 /* Launch Screen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF8B4A6C1A02514200943933 /* en */,
+			);
+			name = "Launch Screen.xib";
+			sourceTree = "<group>";
+		};
+		EF8B4A701A0A4B9E00943933 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF8B4A711A0A4B9E00943933 /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

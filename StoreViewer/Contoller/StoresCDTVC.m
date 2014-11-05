@@ -13,7 +13,7 @@
 #import "ImageCache.h"
 #import "StoreViewController.h"
 #import "MapViewController.h"
-
+#import "LocalizedStrings.h"
 
 @implementation StoresCDTVC
 
@@ -26,6 +26,12 @@
     }];
 }
 
+-(void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    self.title = STORES_VIEW_CONTROLLER_TITLE_TEXT;
+}
 
 -(void)setManagedObjectContext:(NSManagedObjectContext *)managedObjectContext
 {

@@ -7,8 +7,17 @@
 //
 
 #import "StoresForIphoneViewController.h"
+#import "LocalizedStrings.h"
 
 @implementation StoresForIphoneViewController
+
+-(void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    self.navigationItem.rightBarButtonItem.title = STORES_VIEW_CONTROLLER_MAP_BUTTON_TITLE;;
+    
+}
 
 - (NSUInteger)supportedInterfaceOrientations
 {

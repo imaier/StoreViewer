@@ -9,6 +9,7 @@
 #import "StoreViewController.h"
 #import "ImageCache.h"
 #import "MapViewController.h"
+#import "LocalizedStrings.h"
 
 @interface StoreViewController ()
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
@@ -46,6 +47,14 @@
             }
         });
     }];
+}
+
+-(void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    self.navigationItem.rightBarButtonItem.title = STORE_VIEW_CONTROLLER_SHOW_BUTTON_TITLE;
+
 }
 
 -(void)viewWillAppear:(BOOL)animated
